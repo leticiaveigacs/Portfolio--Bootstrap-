@@ -503,7 +503,7 @@
     
 
     <!--   FORMULARIO -->
-        <form lass="form-container" action="https://formsubmit.co/" method="POST" enctype="multipart/form-data">
+      <!--   <form lass="form-container" action="https://formsubmit.co/" method="POST" enctype="multipart/form-data">
             <div class="mb-3" >
              
               <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -523,7 +523,56 @@
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+          </form> -->
+        <!-- FORMULÁRIO -->
+            <form class="form-container needs-validation" action="https://formsubmit.co/" method="POST" enctype="multipart/form-data" novalidate>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="exampleInputName1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleInputName1" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+                    <label for="floatingTextarea">Message</label>
+                    <div class="invalid-feedback">Please provide a message.</div>
+                </div>
+                
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <div class="invalid-feedback">You must check this box before submitting.</div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+<!-- Adicionar o script de validação -->
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+
 
           <br>
 
