@@ -13,8 +13,6 @@ The portfolio website is designed to present information about me, my work, and 
   ## Technologies Used
 
 - **HTML**: For structuring the content.
-- **CSS**: For styling and layout.
-- **JavaScript**: For interactive elements.
 - **Bootstrap**: For responsive design and UI components.
 - **Font Awesome**: For social media icons.
 - **Google Maps Embed API**: For displaying an interactive map.
